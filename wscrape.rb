@@ -2,8 +2,9 @@ require 'nokogiri'
 require 'rss/nokogiri'
 require 'date'
 require 'csv'
+require 'io/console'
 
-# require 'pry'
+
 
 
 print "How many headlines do you want to view (up to 7)? "
@@ -98,4 +99,10 @@ CSV.open('output.csv', 'a') do |csv|
         xx += 1
     end
 end
+
+print "Press any key to continue"
+STDIN.getch
+print "			\r"
+
+
 
